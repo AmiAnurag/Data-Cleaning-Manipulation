@@ -1,6 +1,7 @@
 # Data-Cleaning-Manipulation
 
 ## IMDB MOVIE DATA
+![image](https://user-images.githubusercontent.com/76867868/197213592-44b9d057-fa7f-4853-9ab4-7e056f1f1a85.png)
 
 ### About Dataset
 This Dataset displays only the top 1000 highest grossing feature films of all time as of September 5, 2022. It is in the same order as displayed on the Box Office Mojo website. SOURCE.
@@ -28,6 +29,7 @@ Logline: A one or two sentence summary of the film.
 8. Drop useless columns
 
 ## Case Study : LCO Films data
+![DALL·E 2022-10-21 19 34 29](https://user-images.githubusercontent.com/76867868/197214901-022c159d-fa72-4c49-bb43-a027f289574f.png)
 
 Q1) Which categories of movies released in 2018? Fetch with the number of movies. 
 
