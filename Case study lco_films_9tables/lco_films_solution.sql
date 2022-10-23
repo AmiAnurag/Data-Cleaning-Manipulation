@@ -242,3 +242,26 @@ Limit 1
     ((select film_id from film where title='HARPER DYING'),(select category_id from category where name='Drama'));
     
     select * from film_category order by last_update desc;
+    
+    -- Q21) The entire cast of the movie WEST LION has changed. 
+-- The new actors are DAN TORN, MAE HOFFMAN, SCARLETT DAMON. How would you update the record in the safest way?
+	select film_id from film where title='WEST LION';
+    delete from film_actor where film_id=(select film_id from film where title='WEST LION');
+    Insert into film_actor(film_id,actor_id)
+    values 
+    ((select film_id from film where title='WEST LION'),(select actor_id from actor where concat(first_name,last_name)='DANTORN')),
+    ((select film_id from film where title='WEST LION'),(select actor_id from actor where concat(first_name,last_name)='MAEHOFFMAN')),
+    ((select film_id from film where title='WEST LION'),(select actor_id from actor where concat(first_name,last_name)='SCARLETTDAMON'));
+    
+-- Q22) The entire category of the movie WEST LION was wrongly inserted. The correct categories are Classics, Family, Children.
+-- How would you update the record ensuring no wrong data is left?
+	select category_id,film_id from film_category where film_id=(select film_id from film where title="WEST LION");
+    select category_id from category where name='Classics' or name='Family' or name='Children';
+    delete from film_category where film_id=(select film_id from film where title='WEST LION');
+    insert into film_category(film_id,category_id)
+    values
+    ((select film_id from film where title='WEST LION'),(select category_id from category where name='Classics')),
+    ((select film_id from film where title like "%WEST LION%"),(select category_id from category where name='Family')),
+    ((select film_id from film where title='WEST LION'),(select category_id from category where name='Children'));
+    
+    
