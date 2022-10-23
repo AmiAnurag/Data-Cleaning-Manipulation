@@ -1,6 +1,6 @@
 # Data-Cleaning-Manipulation
 
-## Data Manipulation : IMDB MOVIE DATA
+## Data Manipulation on IMDB MOVIE DATA
 ![image](https://user-images.githubusercontent.com/76867868/197213592-44b9d057-fa7f-4853-9ab4-7e056f1f1a85.png)
 
 ### About Dataset
