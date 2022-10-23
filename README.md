@@ -84,3 +84,7 @@ Q18) Which actor acted in most movies?
 Q19) The actor JOHNNY LOLLOBRIGIDA was removed from the movie GRAIL FRANKENSTEIN. How would you update that record?
 
 Q20) The HARPER DYING movie is an animated movie with Drama and Comedy. Assign these categories to the movie.
+
+Q21) The entire cast of the movie WEST LION has changed. The new actors are DAN TORN, MAE HOFFMAN, SCARLETT DAMON. How would you update the record in the safest way?
+
+Q22) The entire category of the movie WEST LION was wrongly inserted. The correct categories are Classics, Family, Children. How would you update the record ensuring no wrong data is left?
