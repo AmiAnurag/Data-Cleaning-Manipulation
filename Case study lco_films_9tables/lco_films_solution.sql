@@ -243,7 +243,7 @@ Limit 1
     
     select * from film_category order by last_update desc;
     
-    -- Q21) The entire cast of the movie WEST LION has changed. 
+-- Q21) The entire cast of the movie WEST LION has changed. 
 -- The new actors are DAN TORN, MAE HOFFMAN, SCARLETT DAMON. How would you update the record in the safest way?
 	select film_id from film where title='WEST LION';
     delete from film_actor where film_id=(select film_id from film where title='WEST LION');
@@ -264,4 +264,37 @@ Limit 1
     ((select film_id from film where title like "%WEST LION%"),(select category_id from category where name='Family')),
     ((select film_id from film where title='WEST LION'),(select category_id from category where name='Children'));
     
+-- Q23) How many actors acted in films released in 2017?
+	select count(actor_id) as `Number of actors whoose film released in year 2017` 
+	from film_actor 
+	where film_id in (select film_id from film where release_year=2017);
+
+-- Q24) How many Sci-Fi films released between the year 2007 to 2017?
+	select count(title) as `Total number of scifi movies released in year between 2007 and 2017`
+	from film 
+	where release_year between 2007 and 2017 
+	and film_id in 
+	(
+	select film_id from film_category 
+	where 
+	category_id=(
+	select category_id from category where name='Sci-Fi' 
+		) 
+	);
+
+-- Q25) Fetch the actors of the movie WESTWARD SEABISCUIT with the city they live in.
+    select first_name,last_name,city from(
+    select city_id,first_name,last_name from (
+    select first_name,last_name,address_id from
+    film_actor f
+    join actor a
+    where a.actor_id=f.actor_id and film_id=(select film_id from film where title='WESTWARD SEABISCUIT')
+    ) s
+    join address a
+    where a.address_id=s.address_id) s
+    join city c
+    where c.city_id=s.city_id;
     
+    
+-- Q26) What is the total length of all movies played in 2008?
+	select release_year,sum(length) as `Total Length` from film where release_year=2008;
