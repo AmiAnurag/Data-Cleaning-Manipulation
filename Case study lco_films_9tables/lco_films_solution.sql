@@ -226,7 +226,7 @@ Limit 1
 
 -- Q19) The actor JOHNNY LOLLOBRIGIDA was removed from the movie GRAIL FRANKENSTEIN. How would you update that record?
 	-- just update in the film_actor dataset by dropping the actor id corrosponding to JOHNNY LOLLOBRIGIDA against the film id of GRAIL FRANKENSTEIN
-		select actor_id from actor where first_name ='JOHNNY' and last_name='LOLLOBRIGIDA';
+ 	select actor_id from actor where first_name ='JOHNNY' and last_name='LOLLOBRIGIDA';
         select film_id from film where title='GRAIL FRANKENSTEIN';
         
         delete from film_actor 
@@ -236,7 +236,7 @@ Limit 1
         film_id=(select film_id from film where title='GRAIL FRANKENSTEIN');
     
 -- Q20) The HARPER DYING movie is an animated movie with Drama and Comedy. Assign these categories to the movie.
-	insert into film_category(film_id,category_id)
+    insert into film_category(film_id,category_id)
     values
     ((select film_id from film where title='HARPER DYING'),(select category_id from category where name='Comedy')),
     ((select film_id from film where title='HARPER DYING'),(select category_id from category where name='Drama'));
@@ -245,7 +245,7 @@ Limit 1
     
 -- Q21) The entire cast of the movie WEST LION has changed. 
 -- The new actors are DAN TORN, MAE HOFFMAN, SCARLETT DAMON. How would you update the record in the safest way?
-	select film_id from film where title='WEST LION';
+    select film_id from film where title='WEST LION';
     delete from film_actor where film_id=(select film_id from film where title='WEST LION');
     Insert into film_actor(film_id,actor_id)
     values 
@@ -255,7 +255,7 @@ Limit 1
     
 -- Q22) The entire category of the movie WEST LION was wrongly inserted. The correct categories are Classics, Family, Children.
 -- How would you update the record ensuring no wrong data is left?
-	select category_id,film_id from film_category where film_id=(select film_id from film where title="WEST LION");
+    select category_id,film_id from film_category where film_id=(select film_id from film where title="WEST LION");
     select category_id from category where name='Classics' or name='Family' or name='Children';
     delete from film_category where film_id=(select film_id from film where title='WEST LION');
     insert into film_category(film_id,category_id)
@@ -297,4 +297,6 @@ Limit 1
     
     
 -- Q26) What is the total length of all movies played in 2008?
-	select release_year,sum(length) as `Total Length` from film where release_year=2008;
+    select release_year,sum(length) as `Total Length` 
+    from film 
+    where release_year=2008;
