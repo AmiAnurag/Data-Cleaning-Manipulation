@@ -88,3 +88,12 @@ Q20) The HARPER DYING movie is an animated movie with Drama and Comedy. Assign t
 Q21) The entire cast of the movie WEST LION has changed. The new actors are DAN TORN, MAE HOFFMAN, SCARLETT DAMON. How would you update the record in the safest way?
 
 Q22) The entire category of the movie WEST LION was wrongly inserted. The correct categories are Classics, Family, Children. How would you update the record ensuring no wrong data is left?
+
+Q23) How many actors acted in films released in 2017?
+
+Q24) How many Sci-Fi films released between the year 2007 to 2017?
+
+Q25) Fetch the actors of the movie WESTWARD SEABISCUIT with the city they live in.
+
+Q26) What is the total length of all movies played in 2008?
+
