@@ -100,3 +100,7 @@ Q26) What is the total length of all movies played in 2008?
 Q27) Which film has the shortest length? In which language and year was it released?
 
 Q28) How many movies were released each year?
+
+Q29)  How many languages of movies were released each year?.
+
+
