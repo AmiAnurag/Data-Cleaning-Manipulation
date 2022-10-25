@@ -316,3 +316,10 @@ Limit 1
 	from film 
 	group by release_year 
 	order by release_year desc;
+
+-- Q29)  How many languages of movies were released each year?.
+	select release_year,count(distinct language_id) 
+	from film
+	group by release_year
+	order by release_year desc;
+	
