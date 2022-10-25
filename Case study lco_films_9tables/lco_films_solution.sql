@@ -311,3 +311,8 @@ Limit 1
 	join language l
 	where l.language_id=s.language_id;
 
+-- Q28) How many movies were released each year?
+	select release_year,count(film_id) as `Number of films released` 
+	from film 
+	group by release_year 
+	order by release_year desc;
