@@ -300,3 +300,14 @@ Limit 1
     select release_year,sum(length) as `Total Length` 
     from film 
     where release_year=2008;
+    
+-- Q27) Which film has the shortest length? In which language and year was it released?
+	select title,release_year,name 
+	from(
+	select title,release_year,language_id 
+	from film 
+	where length=(select min(length) from film)
+	) s
+	join language l
+	where l.language_id=s.language_id;
+
