@@ -323,3 +323,18 @@ Limit 1
 	group by release_year
 	order by release_year desc;
 	
+select release_year,language_id from film where release_year=2017;
+
+-- Q30) Which actor did least movies?
+	select concat(first_name," ",last_name) as Name from actor 
+	where actor_id=	(
+	select actor_id 
+	from 
+		(
+        select actor_id,count(film_id) 
+	from film_actor 
+		group by actor_id 
+		order by count(film_id) 
+		limit 1 
+        	) s
+        ) 
