@@ -104,3 +104,26 @@ Q28) How many movies were released each year?
 Q29)  How many languages of movies were released each year?.
 
 Q30) Which actor did least movies?
+
+## CASE STUDY : LCO CAR RENTALs
+![image](https://user-images.githubusercontent.com/76867868/198105786-b6841d56-7278-451f-8d16-67e8b5bc2429.png)
+
+Q1) Insert the details of new customer:-
+First name : Nancy
+Last Name: Perry
+Dob : 1988-05-16
+License Number: K59042656E
+Email : nancy@gmail.com
+
+Q2) The new customer (inserted above) wants to rent a car from 2020-08-25 to 2020-08-30. More details are as follows:
+
+Vehicle Type : Economy SUV
+Fuel Option : Market
+Pick Up location: 5150 W 55th St , Chicago, IL, zip- 60638
+Drop Location: 9217 Airport Blvd, Los Angeles, CA, zip - 90045
+
+Q3) The customer with the driving license W045654959 changed his/her drop off location to 1001 Henderson St,  Fort Worth, TX, zip - 76102  and wants to extend the rental upto 4 more days. Update the record.
+
+Q4) Fetch all rental details with their equipment type.
+
+Q5) Fetch all details of vehicles
