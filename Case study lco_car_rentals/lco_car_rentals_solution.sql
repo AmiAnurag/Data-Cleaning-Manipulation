@@ -69,3 +69,13 @@ join
 join vehicle_type vt
 where v.vehicle_type_id=vt.id) s
 where l.id=s.current_location_id;
+
+-- Q6) Get driving license of the customer with most rental insurances.
+select driver_license_number from customer where id in (
+select customer_id from rental r
+join(
+select rental_id from rental_has_insurance where insurance_id=(
+select id from insurance where cost =(select max(cost) from insurance)
+)) s
+where s.rental_id=r.id)
+;
