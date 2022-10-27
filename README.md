@@ -127,3 +127,10 @@ Q3) The customer with the driving license W045654959 changed his/her drop off lo
 Q4) Fetch all rental details with their equipment type.
 
 Q5) Fetch all details of vehicles
+
+Q6) Get driving license of the customer with most rental insurances.
+
+Q7) Insert a new equipment type with following details.
+Name : Mini TV
+Rental Value : 8.99
+
