@@ -79,3 +79,13 @@ select id from insurance where cost =(select max(cost) from insurance)
 )) s
 where s.rental_id=r.id)
 ;
+
+/*
+Q7) Insert a new equipment type with following details.
+Name : Mini TV
+Rental Value : 8.99
+*/
+select * from equipment_type;
+insert into equipment_type(name,rental_value)
+values
+('Mini TV',8.99);
