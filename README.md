@@ -134,3 +134,9 @@ Q7) Insert a new equipment type with following details.
 Name : Mini TV
 Rental Value : 8.99
 
+Q8) Insert a new equipment with following details:
+Name : Garmin Mini TV
+Equipment type : Mini TV
+Current Location zip code : 60638
+
+Q9) Fetch rental invoice for customer (email: smacias3@amazonaws.com). 
