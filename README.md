@@ -140,3 +140,13 @@ Equipment type : Mini TV
 Current Location zip code : 60638
 
 Q9) Fetch rental invoice for customer (email: smacias3@amazonaws.com). 
+
+Q10) Insert the invoice for customer (driving license: ) with following details:-
+Car Rent : 785.4
+Equipment Rent : 114.65
+Insurance Cost : 688.2
+Tax : 26.2
+Total: 1614.45
+Discount : 213.25
+Net Amount: 1401.2
+
