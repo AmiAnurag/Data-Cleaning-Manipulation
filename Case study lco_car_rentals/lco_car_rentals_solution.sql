@@ -103,3 +103,7 @@ values(
 );
 select * from equipment;
 
+-- Q9) Fetch rental invoice for customer (email: smacias3@amazonaws.com). 
+select * from rental_invoice where rental_id=(
+select id from rental where customer_id=(
+select id from customer where email='smacias3@amazonaws.com'));
