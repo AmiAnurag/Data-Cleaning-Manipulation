@@ -89,3 +89,17 @@ select * from equipment_type;
 insert into equipment_type(name,rental_value)
 values
 ('Mini TV',8.99);
+
+/* Q8) Insert a new equipment with following details:
+Name : Garmin Mini TV
+Equipment type : Mini TV
+Current Location zip code : 60638
+*/
+insert into equipment(name,equipment_type_id,current_location_id)
+values(
+"Garmin Mini TV",
+(select id from equipment_type where name='Mini TV'),
+(select id from location where zipcode=60638)
+);
+select * from equipment;
+
